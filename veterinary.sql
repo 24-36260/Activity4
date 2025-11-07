@@ -69,3 +69,9 @@ INSERT INTO owners (ownerid, ofirstname, olastname, address, phone, email) VALUE
 (8, 'Miguel', 'Ramirez', '258 Willow Rd', '555-0123', 'miguel@example.com'),
 (9, 'Isabel', 'Flores', '369 Ash Ln', '555-4567', 'isabel@example.com'),
 (10, 'Diego', 'Morales', '741 Poplar Blvd', '555-8901', 'diego@example.com');
+
+INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid) VALUES
+(1, 'Buddy', 'Dog', 'Golden Retriever', '2020-01-01', 'Male', 'Golden', 1),
+(2, 'Whiskers', 'Cat', 'Siamese', '2019-05-15', 'Female', 'Cream', 2),
+-- Add 8 more rows similarly...
+(10, 'Simba', 'Cat', 'Persian', '2021-03-10', 'Male', 'White', 10);
