@@ -75,3 +75,15 @@ INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color,
 (2, 'Whiskers', 'Cat', 'Siamese', '2019-05-15', 'Female', 'Cream', 2),
 -- Add 8 more rows similarly...
 (10, 'Simba', 'Cat', 'Persian', '2021-03-10', 'Male', 'White', 10);
+
+INSERT INTO appointments (appointid, animalid, appointdate, reason) VALUES
+(1, 1, '2023-01-10', 'Checkup'),
+(2, 2, '2023-01-15', 'Vaccination'),
+(3, 3, '2023-02-05', 'Injury'),
+(4, 4, '2023-02-20', 'Dental'),
+(5, 5, '2023-03-10', 'Surgery'),
+(6, 6, '2023-03-15', 'Eye exam'),
+(7, 7, '2023-04-01', 'Checkup'),
+(8, 2, '2023-04-10', 'Follow-up'),
+(9, 1, '2023-05-05', 'Vaccination'),
+(10, 2, '2023-05-20', 'Checkup');
