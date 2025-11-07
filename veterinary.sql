@@ -125,12 +125,26 @@ INSERT INTO medicalrecords (recordid, animalid, recorddate, doctorid, diagnosis,
 (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
 ALTER TABLE owners ADD registereddate DATE;
+
 ALTER TABLE invoices RENAME COLUMN paymentdate TO paymenttime;
+
 DELETE FROM appointments WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba' AND species = 'Cat');
+
 UPDATE doctors SET dlastname = 'Reyes-Gonzales' WHERE dfirstname = 'Dr.Sofia';
+
 SELECT DISTINCT species FROM animals;
+
 SELECT SUM(totalamount) AS total_sales FROM invoices;
+
 SELECT COUNT(*) AS total_appointments FROM appointments a 
 JOIN animals an ON a.animalid = an.animalid 
 JOIN owners o ON an.ownerid = o.ownerid 
 WHERE o.ofirstname = 'Maria';
+
+SELECT name FROM animals
+WHERE animalid = (
+  SELECT animalid FROM appointments
+  GROUP BY animalid
+  ORDER BY COUNT(*) DESC
+  LIMIT 1
+);
