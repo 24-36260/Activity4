@@ -1,4 +1,4 @@
-CREATE DATABASE veretinary
+CREATE DATABASE veterinary
 
 CREATE TABLE owners (
     ownerid INT PRIMARY KEY,
