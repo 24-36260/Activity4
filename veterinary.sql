@@ -128,3 +128,4 @@ ALTER TABLE owners ADD registereddate DATE;
 ALTER TABLE invoices RENAME COLUMN paymentdate TO paymenttime;
 DELETE FROM appointments WHERE animalid = (SELECT animalid FROM animals WHERE name = 'Simba' AND species = 'Cat');
 UPDATE doctors SET dlastname = 'Reyes-Gonzales' WHERE dfirstname = 'Dr.Sofia';
+SELECT DISTINCT species FROM animals;
