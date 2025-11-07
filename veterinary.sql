@@ -125,3 +125,4 @@ INSERT INTO medicalrecords (recordid, animalid, recorddate, doctorid, diagnosis,
 (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
 ALTER TABLE owners ADD registereddate DATE;
+ALTER TABLE invoices RENAME COLUMN paymentdate TO paymenttime;
